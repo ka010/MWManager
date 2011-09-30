@@ -12,7 +12,7 @@
 
 
 #import "MWMailAppController.h"
-
+#import "MWWeatherMonitor.h"
 
 #import "JSON.h"
 

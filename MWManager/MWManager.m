@@ -16,7 +16,6 @@
 {
     self = [super init];
     if (self) {
-        // Initialization code here.
         
         parser = [SBJsonParser new];
         self.isConnected=NO;
@@ -45,18 +44,25 @@
                                                              object:nil];
         
         
+        /*
+         Setup Weather 
+         */
+        if ([[NSUserDefaults standardUserDefaults]objectForKey:@"weatherCity"]) {
+            [[MWWeatherMonitor sharedMonitor]setCity:[[NSUserDefaults standardUserDefaults]objectForKey:@"weatherCity"]];
+        }
+        
         
         
         /*
          Setup a global Timer
          */
         if ([[NSUserDefaults standardUserDefaults]boolForKey:@"updateIdleScreen"]) {
-            //   self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:[[NSUserDefaults standardUserDefaults]floatForKey:@"updateIdleScreenInterval"] target:self selector:@selector(update) userInfo:nil repeats:YES]; 
+            self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:[[NSUserDefaults standardUserDefaults]floatForKey:@"updateIdleScreenInterval"] target:self selector:@selector(update) userInfo:nil repeats:YES]; 
         }
         
         
         
-        
+
         
         /*
          Init the Watch
@@ -89,6 +95,7 @@
         [dict setObject:@"1" forKey:@"phonecount"];
         [dict setObject:@"2" forKey:@"tweetcount"];
         
+        [dict setObject:[[MWWeatherMonitor sharedMonitor]currentWeather] forKey:@"weatherDict"];
         
         [[MWMetaWatch sharedWatch]writeIdleScreenWithData:dict];
         
@@ -139,11 +146,6 @@
 
 -(void)replayNotification{
     if (self.isConnected) {
-        
-        
-        //        [[MWMetaWatch sharedWatch]writeNotification:[lastNotification objectForKey:@"title"] 
-        //                                        withContent:[lastNotification objectForKey:@"text"]
-        //                                         fromSource:[lastNotification objectForKey:@"src"]];
         
         [[MWMetaWatch sharedWatch]updateDisplay:kMODE_NOTIFICATION];
         [[MWMetaWatch sharedWatch]performSelector:@selector(resetMode) withObject:nil afterDelay:5.0];

@@ -90,13 +90,15 @@
 		case 1:
 			//[prefPanel makeKeyAndOrderFront:self];
             [[MWMetaWatch sharedWatch]close];
+            break;
+        case 2:
             
 			break;
-		case 2:
+		case 3:
             [NSApp activateIgnoringOtherApps:YES];
 			[self.window orderFront:self];
 			break;
-		case 3:
+		case 4:
 			exit(0);
 			break;
             
@@ -161,13 +163,13 @@
 	//item =[NSMenuItem separatorItem];
 	//[statusMenu addItem:item];
 	
-    //	item = [[NSMenuItem alloc]init];
-    //	[item setTitle:@"Check for Updates..."];
-    //	[item setTag:0];
-    //	[item setEnabled:YES];
-    //	[item setAction:@selector(handleSystemMenuEvent:)];
-    //	[statusMenu addItem:item];
-    //	[item release];
+    	item = [[NSMenuItem alloc]init];
+    	[item setTitle:@"Check for Updates..."];
+    	[item setTag:2];
+    	[item setEnabled:NO];
+    	[item setAction:@selector(handleSystemMenuEvent:)];
+    	[statusMenu addItem:item];
+    	[item release];
 	
     
     
@@ -177,7 +179,7 @@
 	
     item = [[NSMenuItem alloc]init];
     [item setTitle:@"Preferences..."];
-    [item setTag:2];
+    [item setTag:3];
     [item setEnabled:YES];
     [item setAction:@selector(handleSystemMenuEvent:)];
     [statusMenu addItem:item];
@@ -193,10 +195,12 @@
     //	
     //	[statusMenu addItem:[NSMenuItem separatorItem]];
 	
-	
+    item =[NSMenuItem separatorItem];
+    [statusMenu addItem:item];
+    
 	item = [[NSMenuItem alloc]init];
 	[item setTitle:@"Quit"];
-	[item setTag:3];
+	[item setTag:4];
 	[item setEnabled:YES];
 	[item setAction:@selector(handleSystemMenuEvent:)];
 	[statusMenu addItem:item];
@@ -216,7 +220,9 @@
 -(void)setupPreferences {
     [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"updateIdleScreen"];
     [[NSUserDefaults standardUserDefaults]setFloat:60.0 forKey:@"updateIdleScreenInterval"];
-    
+    [[NSUserDefaults standardUserDefaults]setObject:@"Stuttgart"  forKey:@"weatherCity"];
+    [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"enableWeather"];
+
     [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"buzzNotifications"];
     [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"enableNotifications"];
     [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"enableNotificationReplay"];
