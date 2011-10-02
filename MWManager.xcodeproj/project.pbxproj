@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E1357351436808E0094F4F3 /* mw8_5.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4E8A4B8A1435402D008CDA90 /* mw8_5.ttf */; };
+		4E1357361436808E0094F4F3 /* mw8_7.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4E8A4B8B1435402D008CDA90 /* mw8_7.ttf */; };
+		4E1357371436808E0094F4F3 /* mw16_11.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4E8A4B8C1435402D008CDA90 /* mw16_11.ttf */; };
 		4E795F1D14357644009084DE /* weather_cloudy.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 4E795F1714357644009084DE /* weather_cloudy.bmp */; };
 		4E795F1E14357644009084DE /* weather_rain.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 4E795F1814357644009084DE /* weather_rain.bmp */; };
 		4E795F1F14357644009084DE /* weather_snow.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 4E795F1914357644009084DE /* weather_snow.bmp */; };
@@ -43,6 +46,13 @@
 		4E8A4B8E1435402D008CDA90 /* mw8_7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E8A4B8B1435402D008CDA90 /* mw8_7.ttf */; };
 		4E8A4B8F1435402D008CDA90 /* mw16_11.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E8A4B8C1435402D008CDA90 /* mw16_11.ttf */; };
 		4E8A4B92143540DA008CDA90 /* mwm.icns in Resources */ = {isa = PBXBuildFile; fileRef = 4E8A4B91143540DA008CDA90 /* mwm.icns */; };
+		4EC83B471436AE3500E008A0 /* MWPluginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC83B461436AE3500E008A0 /* MWPluginManager.m */; };
+		4EC83B501436B11F00E008A0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E8A4B2314353E9D008CDA90 /* Cocoa.framework */; };
+		4EC83B561436B11F00E008A0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EC83B541436B11F00E008A0 /* InfoPlist.strings */; };
+		4EC83B7F1436B41100E008A0 /* MWMReemotePlugin.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4EC83B4F1436B11F00E008A0 /* MWMReemotePlugin.bundle */; };
+		4EC83B871436B87900E008A0 /* MWReemotePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC83B861436B87900E008A0 /* MWReemotePlugin.m */; };
+		4EC83BAF1436CE3E00E008A0 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EC83BAE1436CE3E00E008A0 /* star.png */; };
+		4EC83BB31436F66A00E008A0 /* reemote.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 4EC83BB21436F66A00E008A0 /* reemote.bmp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,9 +70,35 @@
 			remoteGlobalIDString = 4E96A0401429F5C100CFAA5F;
 			remoteInfo = MWKitMobile;
 		};
+		4EC83B7D1436B40A00E008A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E8A4B1614353E9D008CDA90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EC83B4E1436B11F00E008A0;
+			remoteInfo = MWMReemotePlugin;
+		};
+		4EC83BB41436F81000E008A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E8A4B6714353FC5008CDA90 /* MWKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E8FB0661427247C005854AA;
+			remoteInfo = MWKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		4E1357341436806B0094F4F3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Fonts;
+			dstSubfolderSpec = 7;
+			files = (
+				4E1357351436808E0094F4F3 /* mw8_5.ttf in CopyFiles */,
+				4E1357361436808E0094F4F3 /* mw8_7.ttf in CopyFiles */,
+				4E1357371436808E0094F4F3 /* mw16_11.ttf in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4E8A4B6514353F7F008CDA90 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -70,6 +106,16 @@
 			dstSubfolderSpec = 10;
 			files = (
 				4E8A4B7914353FD6008CDA90 /* MWKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EC83B7C1436B3F800E008A0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4EC83B7F1436B41100E008A0 /* MWMReemotePlugin.bundle in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +128,7 @@
 		4E795F1A14357644009084DE /* weather_sunny.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = weather_sunny.bmp; sourceTree = "<group>"; };
 		4E795F1B14357644009084DE /* weather_thunderstorm.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = weather_thunderstorm.bmp; sourceTree = "<group>"; };
 		4E795F1C14357644009084DE /* weather_wind.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = weather_wind.bmp; sourceTree = "<group>"; };
-		4E795F281435779D009084DE /* MWWeatherMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; path = MWWeatherMonitor.h; sourceTree = "<group>"; };
+		4E795F281435779D009084DE /* MWWeatherMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWWeatherMonitor.h; sourceTree = "<group>"; };
 		4E795F291435779D009084DE /* MWWeatherMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWWeatherMonitor.m; sourceTree = "<group>"; };
 		4E8A4B1F14353E9D008CDA90 /* MWManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MWManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E8A4B2314353E9D008CDA90 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -129,6 +175,17 @@
 		4E8A4B8B1435402D008CDA90 /* mw8_7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = mw8_7.ttf; sourceTree = "<group>"; };
 		4E8A4B8C1435402D008CDA90 /* mw16_11.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = mw16_11.ttf; sourceTree = "<group>"; };
 		4E8A4B91143540DA008CDA90 /* mwm.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = mwm.icns; sourceTree = "<group>"; };
+		4EC83B451436AE3500E008A0 /* MWPluginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWPluginManager.h; sourceTree = "<group>"; };
+		4EC83B461436AE3500E008A0 /* MWPluginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWPluginManager.m; sourceTree = "<group>"; };
+		4EC83B4F1436B11F00E008A0 /* MWMReemotePlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MWMReemotePlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EC83B531436B11F00E008A0 /* MWMReemotePlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MWMReemotePlugin-Info.plist"; sourceTree = "<group>"; };
+		4EC83B551436B11F00E008A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4EC83B571436B11F00E008A0 /* MWMReemotePlugin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MWMReemotePlugin-Prefix.pch"; sourceTree = "<group>"; };
+		4EC83B801436B49300E008A0 /* MWPluginProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MWPluginProtocol.h; path = ../MWManager/MWPluginProtocol.h; sourceTree = "<group>"; };
+		4EC83B851436B87900E008A0 /* MWReemotePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWReemotePlugin.h; sourceTree = "<group>"; };
+		4EC83B861436B87900E008A0 /* MWReemotePlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWReemotePlugin.m; sourceTree = "<group>"; };
+		4EC83BAE1436CE3E00E008A0 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		4EC83BB21436F66A00E008A0 /* reemote.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = reemote.bmp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +196,14 @@
 				4E8A4B7B14353FE5008CDA90 /* ScriptingBridge.framework in Frameworks */,
 				4E8A4B2414353E9D008CDA90 /* Cocoa.framework in Frameworks */,
 				4E8A4B7714353FD4008CDA90 /* MWKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EC83B4C1436B11F00E008A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EC83B501436B11F00E008A0 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +231,7 @@
 				4E8A4B91143540DA008CDA90 /* mwm.icns */,
 				4E8A4B6714353FC5008CDA90 /* MWKit.xcodeproj */,
 				4E8A4B2914353E9D008CDA90 /* MWManager */,
+				4EC83B511436B11F00E008A0 /* MWMReemotePlugin */,
 				4E8A4B2214353E9D008CDA90 /* Frameworks */,
 				4E8A4B2014353E9D008CDA90 /* Products */,
 			);
@@ -175,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				4E8A4B1F14353E9D008CDA90 /* MWManager.app */,
+				4EC83B4F1436B11F00E008A0 /* MWMReemotePlugin.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,16 +270,11 @@
 			isa = PBXGroup;
 			children = (
 				4E8A4B6214353F13008CDA90 /* JSON */,
+				4EC83B441436ADE000E008A0 /* Controllers */,
 				4E8A4B4014353ED1008CDA90 /* MWManager.h */,
 				4E8A4B4114353ED1008CDA90 /* MWManager.m */,
-				4E795F281435779D009084DE /* MWWeatherMonitor.h */,
-				4E795F291435779D009084DE /* MWWeatherMonitor.m */,
-				4E8A4B4414353ED1008CDA90 /* MWMailAppController.h */,
-				4E8A4B4514353ED1008CDA90 /* MWMailAppController.m */,
-				4E8A4B4614353ED1008CDA90 /* MWPrefsController.h */,
-				4E8A4B4714353ED1008CDA90 /* MWPrefsController.m */,
-				4E8A4B4814353ED1008CDA90 /* MGPreferencePanel.h */,
-				4E8A4B4914353ED1008CDA90 /* MGPreferencePanel.m */,
+				4EC83B451436AE3500E008A0 /* MWPluginManager.h */,
+				4EC83B461436AE3500E008A0 /* MWPluginManager.m */,
 				4E8A4B4214353ED1008CDA90 /* MWManagerAppDelegate.h */,
 				4E8A4B4314353ED1008CDA90 /* MWManagerAppDelegate.m */,
 				4E8A4B4A14353ED1008CDA90 /* MainMenu.xib */,
@@ -227,6 +289,7 @@
 				4E795F2314357647009084DE /* Images */,
 				4E8A4B9014354030008CDA90 /* Fonts */,
 				4E8A4B7C14354021008CDA90 /* user.png */,
+				4EC83BAE1436CE3E00E008A0 /* star.png */,
 				4E8A4B7D14354021008CDA90 /* light-bulb.png */,
 				4E8A4B7E14354021008CDA90 /* bluetooth.png */,
 				4E8A4B8114354021008CDA90 /* mwm2.png */,
@@ -277,6 +340,51 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		4EC83B441436ADE000E008A0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4E8A4B4614353ED1008CDA90 /* MWPrefsController.h */,
+				4E8A4B4714353ED1008CDA90 /* MWPrefsController.m */,
+				4E8A4B4814353ED1008CDA90 /* MGPreferencePanel.h */,
+				4E8A4B4914353ED1008CDA90 /* MGPreferencePanel.m */,
+				4E795F281435779D009084DE /* MWWeatherMonitor.h */,
+				4E795F291435779D009084DE /* MWWeatherMonitor.m */,
+				4E8A4B4414353ED1008CDA90 /* MWMailAppController.h */,
+				4E8A4B4514353ED1008CDA90 /* MWMailAppController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		4EC83B511436B11F00E008A0 /* MWMReemotePlugin */ = {
+			isa = PBXGroup;
+			children = (
+				4EC83B841436B86900E008A0 /* Classes */,
+				4EC83B521436B11F00E008A0 /* Supporting Files */,
+			);
+			path = MWMReemotePlugin;
+			sourceTree = "<group>";
+		};
+		4EC83B521436B11F00E008A0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4EC83BB21436F66A00E008A0 /* reemote.bmp */,
+				4EC83B531436B11F00E008A0 /* MWMReemotePlugin-Info.plist */,
+				4EC83B541436B11F00E008A0 /* InfoPlist.strings */,
+				4EC83B571436B11F00E008A0 /* MWMReemotePlugin-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4EC83B841436B86900E008A0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4EC83B801436B49300E008A0 /* MWPluginProtocol.h */,
+				4EC83B851436B87900E008A0 /* MWReemotePlugin.h */,
+				4EC83B861436B87900E008A0 /* MWReemotePlugin.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -288,15 +396,36 @@
 				4E8A4B1C14353E9D008CDA90 /* Frameworks */,
 				4E8A4B1D14353E9D008CDA90 /* Resources */,
 				4E8A4B6514353F7F008CDA90 /* CopyFiles */,
+				4E1357341436806B0094F4F3 /* CopyFiles */,
+				4EC83B7C1436B3F800E008A0 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4EC83BB51436F81000E008A0 /* PBXTargetDependency */,
+				4EC83B7E1436B40A00E008A0 /* PBXTargetDependency */,
 			);
 			name = MWManager;
 			productName = MWManager;
 			productReference = 4E8A4B1F14353E9D008CDA90 /* MWManager.app */;
 			productType = "com.apple.product-type.application";
+		};
+		4EC83B4E1436B11F00E008A0 /* MWMReemotePlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EC83B581436B11F00E008A0 /* Build configuration list for PBXNativeTarget "MWMReemotePlugin" */;
+			buildPhases = (
+				4EC83B4B1436B11F00E008A0 /* Sources */,
+				4EC83B4C1436B11F00E008A0 /* Frameworks */,
+				4EC83B4D1436B11F00E008A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MWMReemotePlugin;
+			productName = MWMReemotePlugin;
+			productReference = 4EC83B4F1436B11F00E008A0 /* MWMReemotePlugin.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -322,6 +451,7 @@
 			projectRoot = "";
 			targets = (
 				4E8A4B1E14353E9D008CDA90 /* MWManager */,
+				4EC83B4E1436B11F00E008A0 /* MWMReemotePlugin */,
 			);
 		};
 /* End PBXProject section */
@@ -368,6 +498,16 @@
 				4E795F2014357644009084DE /* weather_sunny.bmp in Resources */,
 				4E795F2114357644009084DE /* weather_thunderstorm.bmp in Resources */,
 				4E795F2214357644009084DE /* weather_wind.bmp in Resources */,
+				4EC83BAF1436CE3E00E008A0 /* star.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EC83B4D1436B11F00E008A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EC83B561436B11F00E008A0 /* InfoPlist.strings in Resources */,
+				4EC83BB31436F66A00E008A0 /* reemote.bmp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,10 +530,32 @@
 				4E8A4B6014353F10008CDA90 /* SBJsonParser.m in Sources */,
 				4E8A4B6114353F10008CDA90 /* SBJsonWriter.m in Sources */,
 				4E795F2A1435779D009084DE /* MWWeatherMonitor.m in Sources */,
+				4EC83B471436AE3500E008A0 /* MWPluginManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EC83B4B1436B11F00E008A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EC83B871436B87900E008A0 /* MWReemotePlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4EC83B7E1436B40A00E008A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EC83B4E1436B11F00E008A0 /* MWMReemotePlugin */;
+			targetProxy = 4EC83B7D1436B40A00E008A0 /* PBXContainerItemProxy */;
+		};
+		4EC83BB51436F81000E008A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MWKit;
+			targetProxy = 4EC83BB41436F81000E008A0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4E8A4B2C14353E9D008CDA90 /* InfoPlist.strings */ = {
@@ -410,6 +572,14 @@
 				4E8A4B3314353E9D008CDA90 /* en */,
 			);
 			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		4EC83B541436B11F00E008A0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4EC83B551436B11F00E008A0 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -490,6 +660,30 @@
 			};
 			name = Release;
 		};
+		4EC83B591436B11F00E008A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MWMReemotePlugin/MWMReemotePlugin-Prefix.pch";
+				INFOPLIST_FILE = "MWMReemotePlugin/MWMReemotePlugin-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		4EC83B5A1436B11F00E008A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MWMReemotePlugin/MWMReemotePlugin-Prefix.pch";
+				INFOPLIST_FILE = "MWMReemotePlugin/MWMReemotePlugin-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -507,6 +701,15 @@
 			buildConfigurations = (
 				4E8A4B3E14353E9E008CDA90 /* Debug */,
 				4E8A4B3F14353E9E008CDA90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EC83B581436B11F00E008A0 /* Build configuration list for PBXNativeTarget "MWMReemotePlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EC83B591436B11F00E008A0 /* Debug */,
+				4EC83B5A1436B11F00E008A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

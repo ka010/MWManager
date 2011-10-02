@@ -9,7 +9,7 @@
 #import "MWManager.h"
 
 @implementation MWManager
-@synthesize isConnected;
+@synthesize isConnected, isSending;
 @synthesize updateTimer;
 
 - (id)init
@@ -19,7 +19,7 @@
         
         parser = [SBJsonParser new];
         self.isConnected=NO;
-        
+        self.isSending=NO;
         
         /*
          Subscribe to MWKit Notifications
@@ -60,10 +60,8 @@
             self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:[[NSUserDefaults standardUserDefaults]floatForKey:@"updateIdleScreenInterval"] target:self selector:@selector(update) userInfo:nil repeats:YES]; 
         }
         
-        
-        
-
-        
+    
+    
         /*
          Init the Watch
          */
@@ -120,13 +118,17 @@
         return;
     }
     
+    if (self.isSending) {
+        return;
+    }
     
     NSLog(@"%@",[aNotification object]);
     NSDictionary *dict = (NSDictionary*)[parser objectWithString:[aNotification object]];
     
+
     if (self.isConnected) {
         
-        
+ 
         [[MWMetaWatch sharedWatch]writeNotification:[dict objectForKey:@"title"] 
                                         withContent:[dict objectForKey:@"text"]
                                          fromSource:[dict objectForKey:@"src"]];
@@ -134,7 +136,7 @@
         if ([[NSUserDefaults standardUserDefaults]boolForKey:@"buzzNotifications"]) {
             [[MWMetaWatch sharedWatch]buzz];
         }
-        
+
         [self performSelector:@selector(update) withObject:nil afterDelay:15.0];
     }
     
@@ -163,8 +165,22 @@
  Local Notifications
  */
 -(void)mwDidOpenChannel:(NSNotification*)aNotification {
+        
+    
+    
     self.isConnected=YES;
+    
+    /*
+     Load all Plugins
+     */
+    [[MWPluginManager sharedManager]loadPlugins];
+    
+    
+    /*
+     Update the idle screen
+     */
     [self update];
+    
 }
 
 -(void)mwDidCloseChannel:(NSNotification*)aNotification {
@@ -176,14 +192,46 @@
 }
 
 -(void)mwDidSendData:(NSNotification*)aNotification {
+    
 }
 
 -(void)mwDidReceiveButtonPress:(NSNotification*)aNotification {
     NSLog(@"Button %@ pressed",[aNotification object]);
     
-    if ([[NSUserDefaults standardUserDefaults]boolForKey:@"enableNotificationReplay"]) {
-        [self replayNotification];
+    switch ([[aNotification object]intValue]) {
+        case 0:
+            if ([[MWPluginManager sharedManager]state]==kMWStateActive) {
+                [[[MWPluginManager sharedManager]currentPlugin]handleButtonPress:[[aNotification object]charValue]];
+                return;
+            }
+            
+            if ([[NSUserDefaults standardUserDefaults]boolForKey:@"enableNotificationReplay"]) {
+                [self replayNotification];
+            }
+            break;
+//        case 6:
+//            
+//            if ([[MWPluginManager sharedManager]state]==kMWStateActive) {
+//                [[MWPluginManager sharedManager]deactivate];
+//            }else {
+//                [[MWPluginManager sharedManager]activate];
+//            }
+//            
+//            break;
+        
+        default:
+            
+            if ([[MWPluginManager sharedManager]state]==kMWStateActive) {
+                 [[[MWPluginManager sharedManager]currentPlugin]handleButtonPress:[[aNotification object]charValue]];
+            }else {
+                [[MWPluginManager sharedManager]activatePluginForKey:[aNotification object]];
+            }
+            break;
     }
+    
+
+    
+    
 }
 
 

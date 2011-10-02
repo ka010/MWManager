@@ -22,8 +22,8 @@ NSString * const View2IconImageName = @"light-bulb";
 NSString * const View3ItemIdentifier = @"Idle Screen";
 NSString * const View3IconImageName = @"user";
 
-NSString * const View4ItemIdentifier = @"About";
-NSString * const View4IconImageName = @"View4Icon";
+NSString * const View4ItemIdentifier = @"Apps";
+NSString * const View4IconImageName = @"star";
 
 
 
@@ -109,7 +109,7 @@ NSString * const View4IconImageName = @"View4Icon";
 			view = view3;
 			break;
 		case 3:
-			[window setTitle: NSLocalizedString(@"About", @"")];
+			[window setTitle: NSLocalizedString(@"Apps", @"")];
 			view = view4;
 			break;
 		default:
@@ -166,7 +166,7 @@ NSString * const View4IconImageName = @"View4Icon";
             		View1ItemIdentifier,
 			View2ItemIdentifier,
 			View3ItemIdentifier,
-            //		View4ItemIdentifier,	
+            		View4ItemIdentifier,	
 			nil];
 }
 
@@ -241,8 +241,8 @@ NSString * const View4IconImageName = @"View4Icon";
 	else if ([itemIdentifier isEqualToString:View4ItemIdentifier]) {
 		
         item = [[NSToolbarItem alloc] initWithItemIdentifier:itemIdentifier];
-        [item setPaletteLabel:NSLocalizedString(@"About", @"")];
-        [item setLabel:NSLocalizedString(@"About", @"")];
+        [item setPaletteLabel:NSLocalizedString(@"Apps", @"")];
+        [item setLabel:NSLocalizedString(@"Apps", @"")];
         [item setImage:[NSImage imageNamed:View4IconImageName]];
 		[item setAction:@selector(changePanes:)];
         [item setTarget:self];

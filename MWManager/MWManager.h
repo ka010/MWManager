@@ -10,6 +10,7 @@
 #import <MWKit/MWKit.h>
 #import <MWKit/MWMetaWatch.h>
 
+#import "MWPluginManager.h"
 
 #import "MWMailAppController.h"
 #import "MWWeatherMonitor.h"
@@ -21,12 +22,13 @@
     SBJsonParser *parser;
     
     NSDictionary *lastNotification;
+    
 }
 
 
 
 @property (retain) NSTimer *updateTimer;
 @property (assign) BOOL isConnected;
-
+@property (assign) BOOL isSending;
 
 @end

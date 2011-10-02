@@ -97,4 +97,19 @@
     return YES;
 }
 
+
+
+
+#pragma mark - NSTableViewDataSource
+
+-(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView{
+    return [[[[MWPluginManager sharedManager]pluginDict]allKeys]count];
+}
+
+
+-(id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
+    return [[[[MWPluginManager sharedManager]pluginDict]allKeys]objectAtIndex:row];
+}
+
+
 @end

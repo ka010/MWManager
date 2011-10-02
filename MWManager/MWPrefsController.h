@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MWPluginManager.h"
 
 #define kInterceptorDownloadURL @"http://dl.dropbox.com/u/852546/Interceptor.growlView.zip"
 
 
-@interface MWPrefsController : NSObject {
+@interface MWPrefsController : NSObject<NSTableViewDataSource,NSTableViewDataSource> {
     IBOutlet NSButton *installInterceptorBtn;
 }
 

@@ -80,6 +80,7 @@
 		case 0:
             //   [updater checkForUpdates:self];
             if ([[[NSUserDefaults standardUserDefaults]objectForKey:@"btAddr"]length]>0) {
+                
                 [[MWMetaWatch sharedWatch]openChannelWithAddressString:[[NSUserDefaults standardUserDefaults]objectForKey:@"btAddr"]];
             }else {
                 [[MWMetaWatch sharedWatch]startSearch];
