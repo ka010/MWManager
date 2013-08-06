@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 
 
-#define kKAWeatherBaseURL @"http://www.google.com/ig/api\?weather="
+#define kKAWeatherBaseURL @"https://www.google.com/ig/api?weather="
+#define kKAWeatherEndURL @"&hl=en&referrer=googlecalendar"
 
 @interface MWWeatherMonitor : NSObject<NSXMLParserDelegate>
 
