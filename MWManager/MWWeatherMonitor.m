@@ -42,7 +42,7 @@ static MWWeatherMonitor *sharedMonitor;
 
 
 -(NSDictionary*)currentWeather {
-    NSURL *url =[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",kKAWeatherBaseURL,self.city]];
+    NSURL *url =[NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@",kKAWeatherBaseURL,self.city,kKAWeatherEndURL]];
     NSData *d = [NSData dataWithContentsOfURL:url];
     NSString *dataString = [[NSString alloc]initWithData:d encoding:NSISOLatin1StringEncoding];
     NSData *data = [dataString dataUsingEncoding:NSUTF8StringEncoding];
